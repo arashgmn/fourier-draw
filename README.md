@@ -15,6 +15,6 @@ Check the `requirements.txt` file. The main packages are:
 - ffpmg (on your machine)
 
 <video width="320" height="240" controls>
-  <source src="fast_andrew.mp4" type="video/mp4">
+  <source src="https://github.com/arashgmn/fourier-draw/blob/master/fast_andrew.mp4" type="video/mp4">
 </video>
 
