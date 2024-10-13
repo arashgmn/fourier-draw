@@ -14,6 +14,9 @@ Check the `requirements.txt` file. The main packages are:
 - networkx
 - ffpmg (on your machine)
 
+
+[![Watch the video](https://github.com/arashgmn/fourier-draw/blob/master/fast_andrew.mp4)](https://github.com/arashgmn/fourier-draw/blob/master/fast_andrew.mp4)
+
 <video width="320" height="240" controls>
   <source src="https://github.com/arashgmn/fourier-draw/blob/master/fast_andrew.mp4" type="video/mp4">
 </video>
