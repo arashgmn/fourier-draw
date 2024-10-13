@@ -1,42 +1,20 @@
-# fourier-draw
+# Andrew's Hat
+This repository is a fork of [fourier-draw](https://github.com/staghado/fourier-draw) with a few algorithmic improvements to enhance speed and the final result, namely:
 
-Implementation of a technique allowing to draw the contour of any image using the Fourier transform.
+- The Fourier coefficients are not approximated using the FFT algorithm instead of manual integration. This make finding coefficients blazing fast.
+- The points are ordered by traversing over a spanning tree (breadth first search) constructed from the coordinates extracted from the image. This minimizes the sudden jumps from one point to another. For large number of points, it take a few minutes to construct the tree.
 
-# How to use it ?
+# Requirements
+Check the `requirements.txt` file. The main packages are:
 
-usage: 
-\
-- **fourier-draw.py [-h] -i INPUT -o OUTPUT [-f FRAMES] [-N N]**
+- cv2
+- scipy
+- numpy 
+- matplotlib
+- networkx
+- ffpmg (on your machine)
 
-arguments:
-```console
-  -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
-                        input image path
-  -o OUTPUT, --output OUTPUT
-                        output animation path
-  -f FRAMES, --frames FRAMES
-                        number of frames
-  -N N, --N N           number of coefficients used
-```
+<video width="320" height="240" controls>
+  <source src="fast_andrew.mp4" type="video/mp4">
+</video>
 
-# Example
-
-* Input image : 
-
-<img src="images/raccoon_rock_n_roll.jpg" width="400" height="400" />
-
-* Output animation :
-
-<img src="animations/raccoon_epicycles_otsu.gif" width="800" height="800" />
-
-
-# Improvements :
-
-After the extraction of the contours, I only take the largest one for simplicity. But if we wanted to reproduce more fine-grained details
-one would need to use all the available contours. In order to do that, we could simply stack all the contours into one big contour but that does not work pretty well since the naive stacking of contours adds more lines which make the final animation cumbersome.
-
-We would like to connect the contours so as to minimize the intersection between the lines.
-
-# Reference : 
-- https://www.youtube.com/watch?v=r6sGWTCMz2k : But what is a Fourier series? From thermal transfer to designs with circles
