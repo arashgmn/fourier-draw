@@ -15,4 +15,4 @@ Check the `requirements.txt` file. The main packages are:
 - ffpmg (on your machine)
 
 
-![fast_andrew](https://github.com/user-attachments/assets/73e2f573-cd25-4272-a107-5f1c6d50101d)
+![fast_andrew](https://raw.githubusercontent.com/arashgmn/fourier-draw/refs/heads/master/fast_andrew.gif)
